@@ -1,5 +1,10 @@
+import 'package:ecommerce/HomePage/category.dart';
+import 'package:ecommerce/HomePage/deal.dart';
 import 'package:ecommerce/HomePage/header.dart';
+import 'package:ecommerce/HomePage/quickPartners.dart';
+import 'package:ecommerce/HomePage/shopsAround.dart';
 import 'package:ecommerce/HomePage/specialDeal.dart';
+import 'package:ecommerce/HomePage/topBrands.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,6 +19,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
         leading: Row(
           children:  [
             Image.asset('assets/images/logo.png',
@@ -55,6 +62,11 @@ class _HomePageState extends State<HomePage> {
           child: Column(children: [
             Header(),
             SpecialDeal(),
+            QuickPartner(),
+            DealsDiscount(),
+            Category(),
+            TopBrands(),
+            shopsAround(),
           ],)
         ),
         
