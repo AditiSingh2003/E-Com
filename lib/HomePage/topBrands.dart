@@ -30,7 +30,7 @@ class _TopBrandsState extends State<TopBrands> {
               ),
             ],
           ),
-          SizedBox(height: 15,),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -45,7 +45,7 @@ class _TopBrandsState extends State<TopBrands> {
               ),
             ],
           ),
-          SizedBox(height: 15,),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -75,7 +75,7 @@ class _TopBrandsState extends State<TopBrands> {
               ),
             ],
           ),
-          SizedBox(height: 15,),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
         ],
       ),
     );
@@ -84,6 +84,7 @@ class _TopBrandsState extends State<TopBrands> {
 
 class BrandImg extends StatefulWidget {
   final BrandImage;
+  
     const BrandImg({
     Key? key,
     required this.BrandImage,

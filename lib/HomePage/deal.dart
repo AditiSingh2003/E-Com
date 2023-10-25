@@ -32,7 +32,7 @@ class _DealsDiscountState extends State<DealsDiscount> {
               ),
             ],
           ),
-          SizedBox(height: 15,),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
           Container(
             height: 235,
             child: ListView.builder(
@@ -81,7 +81,7 @@ class _DealsDiscountState extends State<DealsDiscount> {
                 },
               ),
           ),
-          SizedBox(height: 15,),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
         ],
       ),
     );

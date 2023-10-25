@@ -32,7 +32,7 @@ class _SpecialDealState extends State<SpecialDeal> {
               )
           ),
         ),
-        SizedBox(height: 10,),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
         SmoothPageIndicator(
             controller: controller,
             count: 6,
@@ -44,7 +44,7 @@ class _SpecialDealState extends State<SpecialDeal> {
               spacing: 5,
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
       ],
     );
   }

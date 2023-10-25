@@ -30,13 +30,13 @@ class _shopsAroundState extends State<shopsAround> {
               ),
             ],
           ),
-          SizedBox(height: 15,),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
           Container(
             height: 200,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 6,
-              itemBuilder: (context, index) => 
+              itemBuilder: (context, index) =>
                 Card(
                   elevation: 5,
                   child: Container(
@@ -60,7 +60,7 @@ class _shopsAroundState extends State<shopsAround> {
                                 ),
                               ),
                             ),
-                            SizedBox(width: 10,),
+                            SizedBox(width: MediaQuery.of(context).size.width * 0.025,),
                             Padding(
                               padding: const EdgeInsets.only(top: 10),
                               child: Column(
@@ -73,7 +73,7 @@ class _shopsAroundState extends State<shopsAround> {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  SizedBox(height: 5,),
+                                  SizedBox(height: MediaQuery.of(context).size.height * 0.005,),
                                   Row(
                                     children: [
                                       Icon(Icons.location_on,

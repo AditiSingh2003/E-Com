@@ -30,7 +30,7 @@ class _CategoryState extends State<Category> {
               ),
             ],
           ),
-          SizedBox(height: 15,),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -48,7 +48,7 @@ class _CategoryState extends State<Category> {
                 subHead: 'Electronics'),
             ],
           ),
-          SizedBox(height: 15,),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
         ],
       ),
     );

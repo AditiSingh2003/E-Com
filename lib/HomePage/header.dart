@@ -1,3 +1,4 @@
+import 'package:ecommerce/HomePage/Wallet/walletBalence.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatefulWidget {
@@ -15,7 +16,7 @@ class _HeaderState extends State<Header> {
             children: [
               IntrinsicHeight(
                 child: Container(
-                  height: 50,
+                  height: MediaQuery.of(context).size.height * 0.05,
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: 'What do you want to shop today?',
@@ -30,33 +31,41 @@ class _HeaderState extends State<Header> {
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                height: 100,
-                width: 100,
-                child: Card(
-                  color: Colors.white,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.wallet_outlined,
-                        color: Color(0xFF2E3192),
-                        size: 50,
-                      ),
-                      Text('Wallet',
+                  GestureDetector(
+                    onTap: (){
+                            Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => WalletBalance()),
+                            );
+                          },
+                    child: Container(
+                                  height: 100,
+                                  width: 100,
+                                  child: Card(
+                    color: Colors.white,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.wallet_outlined,
+                          color: Color(0xFF2E3192),
+                          size: 50,
+                        ),
+                        Text('Wallet',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
                           color: Color(0xFF2E3192),
                         ),
-                      )
-                    ],
+                        )
+                      ],
+                    ),
+                                  ),
+                                ),
                   ),
-                ),
-              ),
               Container(
                 height: 100,
                 width: 100,
@@ -82,7 +91,7 @@ class _HeaderState extends State<Header> {
               ),
                 ],
               ),
-              SizedBox(height: 30,),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
             ],
           ),
     );

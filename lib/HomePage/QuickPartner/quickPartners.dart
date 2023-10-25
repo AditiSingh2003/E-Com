@@ -1,3 +1,4 @@
+import 'package:ecommerce/HomePage/QuickPartner/quiuckPartScroll.dart';
 import 'package:flutter/material.dart';
 
 class QuickPartner extends StatefulWidget {
@@ -18,7 +19,7 @@ class _QuickPartnerState extends State<QuickPartner> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(height: 18,),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.018,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -27,7 +28,7 @@ class _QuickPartnerState extends State<QuickPartner> {
             PremCard(),
           ],
         ),
-        SizedBox(height: 10,),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -37,16 +38,24 @@ class _QuickPartnerState extends State<QuickPartner> {
               height: 100,
               width: 100,
               child: Center(
-                child:Text('View More',
+                child:TextButton(
+                  onPressed: (){
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => QuickPartnerScroll()),
+                  );
+                  },
+                  child: Text('View More',
                   style: TextStyle(
                     color: Colors.grey.shade600,
+                  ),
                   ),
                 )
                 ),
             )
           ],
         ),
-        SizedBox(height: 15,),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
       ],
     );
   }

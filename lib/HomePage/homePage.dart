@@ -1,7 +1,7 @@
 import 'package:ecommerce/HomePage/category.dart';
 import 'package:ecommerce/HomePage/deal.dart';
 import 'package:ecommerce/HomePage/header.dart';
-import 'package:ecommerce/HomePage/quickPartners.dart';
+import 'package:ecommerce/HomePage/QuickPartner/quickPartners.dart';
 import 'package:ecommerce/HomePage/shopsAround.dart';
 import 'package:ecommerce/HomePage/specialDeal.dart';
 import 'package:ecommerce/HomePage/topBrands.dart';
@@ -69,8 +69,36 @@ class _HomePageState extends State<HomePage> {
             shopsAround(),
           ],)
         ),
-        
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_outlined,
+            color:  Colors.white,
+            ),
+            backgroundColor: Color(0xFF2E3192),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.directions_outlined,
+            color:  Colors.white,),
+            label: '',
+            backgroundColor: Color(0xFF2E3192),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications_active_outlined,
+            color:  Colors.white,),
+            label: '',
+            backgroundColor: Color(0xFF2E3192),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person,
+            color: Colors.white,),
+            label: '',
+            backgroundColor: Color(0xFF2E3192),
+          ),
+        ],
+      )
     );
   }
 }

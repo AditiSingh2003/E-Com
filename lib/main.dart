@@ -1,4 +1,4 @@
-import 'package:ecommerce/HomePage/homePage.dart';
+import 'package:ecommerce/LoginScreen/signup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'E-Commerce',
-      home: HomePage(),
+      home: SignUp(),
     );
   }
 }
