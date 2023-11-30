@@ -1,6 +1,7 @@
 import 'package:ecommerce/HomePage/QuickPartner/quickPartDetail.dart';
 import 'package:ecommerce/HomePage/QuickPartner/quickPartners.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class QuickPartnerScroll extends StatefulWidget {
   const QuickPartnerScroll({super.key});
@@ -14,6 +15,12 @@ class _QuickPartnerScrollState extends State<QuickPartnerScroll> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         iconTheme: IconThemeData(color: Color(0xFF2E3192)),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -107,10 +114,9 @@ class _QuickPartnerScrollState extends State<QuickPartnerScroll> {
                         ),
                       ),
                           Padding(
-                                  padding: EdgeInsets.only(top: 10, right: 10),
-                                  child: Icon(Icons.favorite_border,
-                                    color: Colors.yellow,
-                              ),
+                            padding: EdgeInsets.only(top: 10, right: 10),
+                            child: FaIcon(FontAwesomeIcons.heart,
+                            color: Colors.yellowAccent,)
                             ),
                     ],
                   )

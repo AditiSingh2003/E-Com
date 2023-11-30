@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart'; 
 
 class TopBrands extends StatefulWidget {
   const TopBrands({super.key});
@@ -17,8 +18,9 @@ class _TopBrandsState extends State<TopBrands> {
           Row(
             children: [
               Text('Top Brands',
-                style: TextStyle(
-                  fontSize: 24,
+                style: GoogleFonts.poppins(
+                  color: Color(0xFF2E3192),
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
               ),

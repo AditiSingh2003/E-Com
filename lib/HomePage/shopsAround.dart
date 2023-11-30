@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class shopsAround extends StatefulWidget {
   const shopsAround({super.key});
@@ -18,8 +20,9 @@ class _shopsAroundState extends State<shopsAround> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('Shops Around ',
-                style: TextStyle(
-                  fontSize: 24,
+                style: GoogleFonts.poppins(
+                  color: Color(0xFF2E3192),
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -32,7 +35,7 @@ class _shopsAroundState extends State<shopsAround> {
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
           Container(
-            height: 200,
+            height: 160,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 6,
@@ -98,9 +101,8 @@ class _shopsAroundState extends State<shopsAround> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(top: 10, right: 10),
-                          child: Icon(Icons.favorite_border,
-                            color: Colors.yellow,
-                          ),
+                          child: FaIcon(FontAwesomeIcons.heart,
+                            color: Colors.yellowAccent,)
                           ),
                       ],
                     ),

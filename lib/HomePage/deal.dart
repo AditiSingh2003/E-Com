@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DealsDiscount extends StatefulWidget {
   const DealsDiscount({super.key});
@@ -19,8 +21,9 @@ class _DealsDiscountState extends State<DealsDiscount> {
           Row(
             children: [
               Text('Deals & Discounts',
-                style: TextStyle(
-                  fontSize: 24,
+                style: GoogleFonts.poppins(
+                  color: Color(0xFF2E3192),
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -68,9 +71,9 @@ class _DealsDiscountState extends State<DealsDiscount> {
                                   fontWeight: FontWeight.bold,
                                   ),
                               ),
-                              Icon(Icons.favorite_border,
+                              FaIcon(FontAwesomeIcons.heart,
                               color: Colors.grey.shade600,
-                              ),
+                              )
                             ],
                           ),
                         ),

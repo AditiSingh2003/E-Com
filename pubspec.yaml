@@ -37,6 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   smooth_page_indicator: ^1.1.0
   pinput: ^3.0.1
+  font_awesome_flutter:
+  google_fonts:
+  firebase_core:
+  firebase_auth:
 
 dev_dependencies:
   flutter_test:

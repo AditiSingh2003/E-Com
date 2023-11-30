@@ -1,5 +1,6 @@
 import 'package:ecommerce/HomePage/QuickPartner/quiuckPartScroll.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class QuickPartDetail extends StatefulWidget {
   const QuickPartDetail({super.key});
@@ -63,11 +64,15 @@ class _QuickPartDetailState extends State<QuickPartDetail> {
           ),
           child: Row(
             children: [
-              Icon(Icons.star, color: Colors.yellow),
+              FaIcon(FontAwesomeIcons.crown,
+              color: Colors.yellowAccent,
+              size: 10,
+              ),
               SizedBox(width: 5,),
               Text(
                 'Premium',
                 style: TextStyle(
+                  fontSize: 10,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -141,19 +146,19 @@ class _QuickPartDetailState extends State<QuickPartDetail> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 openNowButton(
-                  IconDa: Icons.favorite_border,
+                  IconDa: FontAwesomeIcons.heart,
                   subHeading: 'Favourite',
                 ),
                 openNowButton(
-                  IconDa: Icons.share,
+                  IconDa: FontAwesomeIcons.share,
                   subHeading: 'Share',
                 ),
                 openNowButton(
-                  IconDa: Icons.location_on,
+                  IconDa: FontAwesomeIcons.directions,
                   subHeading: 'Directions',
                 ),
                 openNowButton(
-                  IconDa: Icons.call,
+                  IconDa: FontAwesomeIcons.phone,
                   subHeading: 'Call',
                 ),
               ],
@@ -217,7 +222,7 @@ class _openNowButtonState extends State<openNowButton> {
                       height: 50,
                       child: IconButton(
                       onPressed: () {},
-                      icon:Icon(widget.IconDa,
+                      icon:FaIcon(widget.IconDa,
                       color: Color(0xFF2E3192),
                       ),
                       style: ElevatedButton.styleFrom(

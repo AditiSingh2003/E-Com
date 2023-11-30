@@ -1,5 +1,7 @@
 import 'package:ecommerce/HomePage/QuickPartner/quiuckPartScroll.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuickPartner extends StatefulWidget {
   const QuickPartner({super.key});
@@ -14,9 +16,10 @@ class _QuickPartnerState extends State<QuickPartner> {
     return Column(
       children: [
         Text('Quick Partner',
-          style: TextStyle(
-            fontSize: 24,
+          style: GoogleFonts.poppins(
+            fontSize: 20,
             fontWeight: FontWeight.bold,
+            color: Color(0xFF2E3192),
           ),
         ),
         SizedBox(height: MediaQuery.of(context).size.height * 0.018,),
@@ -100,12 +103,15 @@ class _PremCardState extends State<PremCard> {
             ),
             child: Row(
               children: [
-                Icon(Icons.star,
-                color: Colors.yellowAccent,
+                FaIcon(FontAwesomeIcons.crown,
+                  color: Colors.yellowAccent,
+                  size: 12,
                 ),
+                SizedBox(width: 2,),
                 Text(
                   'Premium',
                   style: TextStyle(
+                    fontSize: 10,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),

@@ -1,5 +1,6 @@
 import 'package:ecommerce/HomePage/Wallet/walletBalence.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Header extends StatefulWidget {
   const Header({super.key});
@@ -15,17 +16,20 @@ class _HeaderState extends State<Header> {
       child: Column(
             children: [
               IntrinsicHeight(
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.05,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'What do you want to shop today?',
-                      prefixIcon: Icon(Icons.search,
-                        color: Color(0xFF2E3192),
-                      ),
-                      border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Color(0xFF2E3192)),
-                        borderRadius: BorderRadius.circular(15),
+                child: Center(
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.06,
+                    child: TextField(
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        hintText: 'What do you want to shop today?',
+                        prefixIcon: Icon(Icons.search,
+                          color: Color(0xFF2E3192),
+                        ),
+                        border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2E3192)),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
                       ),
                     ),
                   ),
@@ -37,23 +41,25 @@ class _HeaderState extends State<Header> {
                 children: [
                   GestureDetector(
                     onTap: (){
-                            Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => WalletBalance()),
-                            );
-                          },
+                      Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => WalletBalance()),
+                      );
+                    },
                     child: Container(
-                                  height: 100,
-                                  width: 100,
-                                  child: Card(
+                    height: 100,
+                    width: 100,
+                    child: Card(
                     color: Colors.white,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.wallet_outlined,
-                          color: Color(0xFF2E3192),
-                          size: 50,
-                        ),
+                        IconButton(onPressed: (){
+
+                        }, 
+                        icon: FaIcon(FontAwesomeIcons.wallet,
+                        color: Color(0xFF2E3192),
+                          size: 35,)),
                         Text('Wallet',
                         style: TextStyle(
                           fontSize: 18,
@@ -63,9 +69,9 @@ class _HeaderState extends State<Header> {
                         )
                       ],
                     ),
-                                  ),
-                                ),
                   ),
+                ),
+              ),
               Container(
                 height: 100,
                 width: 100,
@@ -74,9 +80,9 @@ class _HeaderState extends State<Header> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.local_offer_outlined,
+                      FaIcon(FontAwesomeIcons.tag,
                         color: Color(0xFF2E3192),
-                        size: 50,
+                        size: 35,
                       ),
                       Text('Deals',
                         style: TextStyle(

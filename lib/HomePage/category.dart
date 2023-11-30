@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Category extends StatefulWidget {
   const Category({super.key});
@@ -17,9 +18,10 @@ class _CategoryState extends State<Category> {
           Row(
             children: [
               Text('Category',
-                style: TextStyle(
-                  fontSize: 24,
+                style: GoogleFonts.poppins(
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
+                  color: Color(0xFF2E3192),
                 ),
               ),
               Spacer(),
